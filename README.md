@@ -1,5 +1,5 @@
+# Useful scripts for ctf competition 
 # pranatdayal 
-# Scripts useful for ctf competition 
 
 offense.sh:
 -----------
