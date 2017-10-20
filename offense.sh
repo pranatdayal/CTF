@@ -23,3 +23,8 @@ echo "[+]Done!"
 echo "[*]Downloading backdoor-factory"
 echo "  $(git clone  https://github.com/secretsquirrel/the-backdoor-factory.git)"
 echo "[+]Done!"
+
+# download routersploit
+echo "[*]Downloading routersploit"
+echo "  $(git clone http://github.com/reverse-shell/routersploit)"
+echo "[+]Done!"
