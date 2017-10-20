@@ -6,7 +6,6 @@ nc='\033[0m'
 
 echo -e "${green}[*] Setting up Defense${nc}"
 
-
 #install and setup labrea tarpit to detect rogue scanning
 echo -e "${green}[*] Installing Labrea taprit${nc}"
 apt-get install labrea
@@ -38,7 +37,6 @@ function lmd()
 }
 
 lmd
-
 #clone defensive scripts from github
 echo -e "${green}[*] Downloading defense scripts from github${nc}"
 git clone https://github.com/pranatdayal/IRSEC_scripts.git
@@ -50,7 +48,12 @@ echo -e "${green}[+] Defense is up! Good luck !${nc}"
 
 echo -e "${green}[+] Running labrea tarpit now${nc}"
 
-runlabrea
+#runlabrea
 
+echo -e "${green}[+] Running linux maldetect${nc}"
+maldet -b --scan-all /
 
-
+while true;
+do
+    watch -n 120 grep "[scan]" /usr/local/maldetect/logs/event_log
+done
