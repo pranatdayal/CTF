@@ -1,6 +1,6 @@
 #!/bin/bash
 red='\033[0;31m'
-green='\033[0:32m'
+green='\033[0;32m'
 nc='\033[0m'
 
 echo -e "${red}Setting up offense${nc}"
