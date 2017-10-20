@@ -1,17 +1,20 @@
 #!/bin/bash
 # Script to setup defense
+red='\033[0;31m'
+green='\033[0;32m'
+nc='\033[0m'
 
-echo "[*] Setting up Defense"
+echo -e "${green}[*] Setting up Defense${nc}"
 
 
 #install and setup labrea tarpit to detect rogue scanning
-echo "[*] Installing Labrea taprit"
+echo -e "${green}[*] Installing Labrea taprit${nc}"
 apt-get install labrea
 if [ -x "$(command -v labrea)" ]
 then
-    echo "[+] Done! - labrea installed"
+    echo -e "${green}[+] Done! - labrea installed${nc}"
 else
-    echo "Could not install labrea"
+    echo -e "${red}Could not install labrea${nc}"
 fi
 function runlabrea()
 {
@@ -19,7 +22,7 @@ function runlabrea()
 
 }
 #install linux malware detector
-echo "[*] Installing linux malware detector"
+echo -e "${green}[*] Installing linux malware detector${nc}"
 function lmd()
 {
     wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
@@ -27,13 +30,17 @@ function lmd()
     cd maldetect-*
     if /bin/bash install.sh
     then
-        echo "[+] Done! - linux malware detector installed"
+        echo -e "${green}[+] Done! - linux malware detector installed${nc}"
     else
-        echo "Couldnt not install linux malware detector"
+        echo -e "${red}Couldnt not install linux malware detector${nc}"
+    fi
 }
 
-lmd
-runlabrea
+lmd 
+echo " " 
+echo -e "${green}[+] Defense is up!${nc}"
+echo -e "${green}[+] Running labrea tarpit now${nc}" 
+runlabrea 
 
 
 
