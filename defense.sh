@@ -55,5 +55,6 @@ maldet -b --scan-all /
 
 while true;
 do
-    watch -n 120 grep "[scan]" /usr/local/maldetect/logs/event_log
+    watch -n 120 "cat /usr/local/maldetect/logs/event_log | grep 'hit'";
+    test $? -gt 128 && break;
 done
