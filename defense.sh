@@ -34,6 +34,7 @@ function lmd()
     else
         echo -e "${red}Couldnt not install linux malware detector${nc}"
     fi
+    cd ..
 }
 
 lmd
@@ -46,7 +47,6 @@ echo -e "${green}[+] Done!- IRSEC_scripts directory created${nc}"
 echo " "
 
 echo -e "${green}[+] Defense is up! Good luck !${nc}"
-echo "\n"
 
 echo -e "${green}[+] Running labrea tarpit now${nc}"
 
