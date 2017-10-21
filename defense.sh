@@ -18,7 +18,7 @@ else
 fi
 function runlabrea()
 {
-    labrea -z -s -o -b -v -i eth0 2>&1| tee -a log.txt
+    labrea -s -o -b -v -i eth0 2>&1| tee -a log.txt
 
 }
 #install linux malware detector
