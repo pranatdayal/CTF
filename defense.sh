@@ -26,7 +26,7 @@ function lmd()
 {
     wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
     tar xfz maldetect-current.tar.gz
-    cd maldetect-*
+    cd maldetect-1.6.2
     if /bin/bash install.sh
     then
         echo -e "${green}[+] Done! - linux malware detector installed${nc}"
@@ -55,6 +55,6 @@ maldet -b --scan-all /
 
 while true;
 do
-    watch -n 120 "cat /usr/local/maldetect/logs/event_log | grep 'hit'";
+    watch -n 120 "grep '{scan}' /usr/local/maldetect/logs/event_log";
     test $? -gt 128 && break;
 done
