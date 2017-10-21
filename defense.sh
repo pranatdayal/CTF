@@ -36,17 +36,17 @@ function lmd()
     fi
 }
 
-lmd 
+lmd
 
 #clone defensive scripts from github
 echo -e "${green}[*] Downloading defense scripts from github${nc}"
-git clone https://github.com/pranatdayal/IRSEC_scripts
+git clone https://github.com/pranatdayal/IRSEC_scripts.git
 echo -e "${green}[+] Done!- IRSEC_scripts directory created${nc}"
-echo " " 
+echo " "
 echo -e "${green}[+] Defense is up!${nc}"
-echo -e "${green}[+] Running labrea tarpit now${nc}" 
+echo -e "${green}[+] Running labrea tarpit now${nc}"
 
-runlabrea & disown 
+runlabrea & disown
 
 
 
