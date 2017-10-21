@@ -1,0 +1,16 @@
+# Get full tty shell using stty 
+
+# in reverse shell 
+
+$ python -c 'import pty;pty.spawn("/bin/bash")'
+
+# in kali
+$ stty raw -echo
+$ fg
+
+# in reverse shell
+
+$ reset 
+$ export shell=bash 
+$ export term=xterm-256color 
+$ stty rows 38 columns 116
