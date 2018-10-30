@@ -39,7 +39,7 @@ function lmd()
 lmd
 #clone defensive scripts from github
 echo -e "${green}[*] Downloading defense scripts from github${nc}"
-git clone https://github.com/pranatdayal/IRSEC_scripts.git
+git clone https://github.com/pranatdayal/blue-team.git
 echo -e "${green}[+] Done!- IRSEC_scripts directory created${nc}"
 
 echo " "
